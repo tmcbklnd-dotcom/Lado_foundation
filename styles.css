@@ -1,0 +1,42 @@
+/* styles.css - simple, responsive styles for Lado Foundation site */
+:root{
+  --accent:#ff5722;
+  --green:#4CAF50;
+  --max-width:1000px;
+  --muted:#666;
+}
+*{box-sizing:border-box}
+body{font-family:Inter, "Segoe UI", Roboto, Arial, sans-serif;margin:0;color:#222;line-height:1.6}
+.container{max-width:var(--max-width);margin:0 auto;padding:20px}
+header.hero{
+  background-image: url('https://images.unsplash.com/photo-1529070538774-1843cb3265df?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d');
+  background-size:cover;background-position:center;color:white;padding:100px 20px;text-align:center
+}
+header.hero .overlay{background:rgba(0,0,0,0.45);padding:40px;border-radius:8px;display:inline-block}
+header.hero h1{font-size:2.4rem;margin:0 0 10px}
+header.hero .tagline{font-size:1.1rem;margin-bottom:18px}
+.btn{display:inline-block;background:var(--accent);color:white;padding:12px 22px;border-radius:6px;text-decoration:none;font-weight:600}
+.btn-strong{background:#d84315;padding:14px 26px}
+.about{padding:60px 20px;background:#fff}
+.about-grid{display:grid;grid-template-columns:1fr 380px;gap:24px;align-items:center}
+.about-photo img{width:100%;height:auto;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,0.1)}
+.founder{background:#f7f7f7;padding:40px 20px}
+.founder-inner{display:flex;gap:20px;align-items:center}
+.founder-photo img{width:160px;height:160px;object-fit:cover;border-radius:6px;box-shadow:0 6px 18px rgba(0,0,0,0.08)}
+.callout{padding:40px 20px;background:linear-gradient(90deg, #fff4ec, #fff);text-align:center}
+footer{background:#fafafa;padding:20px 0;color:var(--muted);text-align:center;font-size:0.95rem}
+.simple-header{background:var(--green);color:white;padding:30px 0;text-align:center}
+.donation .upi-block{display:flex;gap:20px;align-items:center;justify-content:center;margin:20px 0;flex-wrap:wrap}
+.upi-id{min-width:220px;text-align:center}
+.upi-id label{display:block;font-weight:600;color:var(--muted);margin-bottom:6px}
+.upi-value{background:#fff;border-radius:6px;padding:10px 14px;box-shadow:0 2px 8px rgba(0,0,0,0.06);font-weight:700}
+.qr img{width:300px;height:300px;border-radius:8px;box-shadow:0 8px 20px rgba(0,0,0,0.08)}
+.donation-instructions{max-width:720px;margin:0 auto;text-align:left}
+.center{text-align:center}
+@media(max-width:880px){
+  .about-grid{grid-template-columns:1fr; padding-bottom:0}
+  .founder-inner{flex-direction:column;text-align:center}
+  header.hero{padding:60px 20px}
+  header.hero h1{font-size:1.8rem}
+  .qr img{width:240px;height:240px}
+}
